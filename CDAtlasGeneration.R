@@ -309,7 +309,7 @@ error_df <- data.frame(layer_index = integer(), ident = character(), layer_name 
 length = length(Layers(obj)) 
 for (i in 1:length) {
   # Access the RNA data
-  tube <- obj[['RNA']][[Layers(obj)[i]]]
+  tube <- obj[['RNA']][Layers(obj)[i]]
   # Try executing FindVariableFeatures
   tryCatch({
     # Find variable features
